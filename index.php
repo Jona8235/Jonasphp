@@ -26,7 +26,7 @@
 					<li class="toprow-li"><a href="#" style="color:	#556B2F;">Streams</a></li>
 					<li class="toprow-li"><a href="#" style="color:	#556B2F;">Top rating</a></li>
 					<li class="toprow-li " ><a href="#" style="color:	#556B2F; "> Kontakt</a></li>
-					<li class="toprow-li " ><a href="#" style="color:	#556B2F;">Log på</a></li>
+					<li class="top-row-li " ><a href="#" style="color:	#556B2F;" class="login">Log på</a></li>
 					<li class="icon">
     <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
   </li>
@@ -45,14 +45,11 @@
 
 	<div class="row">
 		<main class="col-md-9">
+<?php include "fetchDb.php"; 
+?>
 
 
-	src 
-	alt
-	heading
-	time
-	articleText
-	id
+		
 
 
 
@@ -62,7 +59,7 @@
 
 
 		
-	<aside class="panel panel-primary">
+	<aside class="panel panel-primary" id ="form">
 		<div class="form-group" id="formbox">
 			<label for="username" style="margin-left:20px;">Username </label>
 				<input type="text" class="form-control" id="username" placeholder="Skriv dit username her">
@@ -125,7 +122,7 @@
 		<p >Copyright &copy</p>
 
 </footer>
-
+<script type="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");
@@ -135,15 +132,16 @@ function myFunction() {
         x.className = "topnav";
     }
 }
-</script>
-<script type="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script >
-	$(function) {
-		$(".panel").hide();
-	}
+
+
+
+$(document).ready(function(){
+ $(".login").click(function(){
+   $(".panel.panel-primary").hide();
+ });
+});
 
 </script>
-
 	
 </body>
 </html>
