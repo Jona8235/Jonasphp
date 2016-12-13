@@ -8,6 +8,9 @@
 textarea {
   width: 100%;
 }
+aside {
+  float: left;
+}
 
 ul.topnav {
   list-style-type: none;

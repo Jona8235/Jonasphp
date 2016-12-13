@@ -44,22 +44,26 @@
 
 
 	<div class="container" id="Margin">
-
+		<div class="col-md-12">
+<form action="insert.php" method="post" class="form-horizontal">
 <div class="form-group" id="show">
 	<label for="heading">Tilføj en overskrift</label>
-	<input type="text" class="form-control" id="heading">
-	<label for="time">Tilføj et tidspunkt & dato</label>
-	<input text="number" class="form-control" id="time">
+	<input type="text" class="form-control" id="heading" name="heading" placeholder="Tilføj en overskrift her...">
+	<label for="imgAlt">Tilføj en alt tekst til dit billede</label>
+	<input type="text" class="form-control" id="heading" name="imgAlt" placeholder="Tilføj en alt tekst til dit billede...">
 	<label for="articletext">Tilføj artikel text</label>
-	<textarea rows="4" cols="50" id="articletext"></textarea>
-		<label for="myFile">Tilføj billede </label>
-	<input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-	<button type="submit" class="btn btn-default">Upload</button>
+	<textarea rows="4" cols="50" id="articletext" placeholder="Tilføj indhold..." name="articletext"></textarea>
+	<label for="myFile">Tilføj billede </label>
+	<input type="file" name="myFile" id="myFile" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+	
 	<button type="submit" class="btn btn-default" style="float:right;">Tilføj artikel</button>
 </div>
 
-		</div>
+		</form>
+	</div>
+
 	<aside class="panel panel-primary" id ="form">
+
 		<div class="form-group" id="formbox">
 			<label for="username" >Username </label>
 				<input type="text" class="form-control" id="username" placeholder="Skriv dit username her">
@@ -84,7 +88,7 @@
 
 </div>
 
-		</form>
+		
 	</aside>
 	
 
@@ -105,36 +109,7 @@
 		
 		</main>
 	</div>
-	<article class="container">
-		<img src="img/csgo.jpg" class="col-md-12 img-responsive " id="Padding">
-
-		<h1 class="text-center">CTS</h1>
-		<p class="text-center ">22/6 2006 <br> 19:00</p>
-		<p class="text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit obcaecati inventore recusandae magnam fugit illum totam ad, hic eos veniam ipsa, dolorum, accusantium optio assumenda odit voluptate quod explicabo? Dolorem?</p>
-
-	</article>
-	<article class="container">
-		<img src="img/csgohalloween.png" class="col-md-12 img-responsive" id="Padding">
-		<h1 class="text-center">Halloween</h1>
-		<p class="text-center ">22/9 2008 <br> 6:00</p>
-		<p class="text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit obcaecati inventore recusandae magnam fugit illum totam ad, hic eos veniam ipsa, dolorum, accusantium optio assumenda odit voluptate quod explicabo? Dolorem?</p>
-
-	</article>
-	<article class="container">
-		<img src="img/csgo2.jpg" class="col-md-12 img-responsive" id="Padding">
-		<h1 class="text-center">Anti terrorist</h1>
-		<p class="text-center ">23/8 2007 <br> 16:57
-		<p class="text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit obcaecati inventore recusandae magnam fugit illum totam ad, hic eos veniam ipsa, dolorum, accusantium optio assumenda odit voluptate quod explicabo? Dolorem?</p>
-
-	</article>
-
-	<article class="container">
-		<img src="img/gaben.jpg" class="col-md-12 img-responsive" id="Padding"></img>
-		<h1 class="text-center">Gaben</h1>
-		<p class="text-center  ">12/3 2007 <br> 17:00</p>
-		<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit obcaecati inventore recusandae magnam fugit illum totam ad, hic eos veniam ipsa, dolorum, accusantium optio assumenda odit voluptate quod explicabo? Dolorem?</p>
-
-	</article>
+	
 	
 	
 <footer class="container-fluid">
