@@ -43,9 +43,58 @@
 
 
 
+	<div class="container" id="Margin">
+
+<div class="form-group" id="show">
+	<label for="heading">Tilføj en overskrift</label>
+	<input type="text" class="form-control" id="heading">
+	<label for="time">Tilføj et tidspunkt & dato</label>
+	<input text="number" class="form-control" id="time">
+	<label for="articletext">Tilføj artikel text</label>
+	<textarea rows="4" cols="50" id="articletext"></textarea>
+		<label for="myFile">Tilføj billede </label>
+	<input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+	<button type="submit" class="btn btn-default">Upload</button>
+	<button type="submit" class="btn btn-default" style="float:right;">Tilføj artikel</button>
+</div>
+
+		</div>
+	<aside class="panel panel-primary" id ="form">
+		<div class="form-group" id="formbox">
+			<label for="username" >Username </label>
+				<input type="text" class="form-control" id="username" placeholder="Skriv dit username her">
+				<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" class="form-control" id="password" placeholder="Skriv dit password her">
+				<div class="form-check">
+    <label class="form-check-label">
+      <input type="checkbox" class="form-check-input" id="checkbox">
+      Husk mig
+    </label><br>
+    <button type="submit" class="btn btn-default" id="button">Log på</button>
+  </div>
+  
+
+
+
+
+				</div>
+
+
+
+</div>
+
+		</form>
+	</aside>
+	
+
+
+
 	<div class="row">
-		<main class="col-md-9">
+		<main class="col-md-12">
 <?php include "fetchDb.php"; 
+
+
 ?>
 
 
@@ -56,35 +105,6 @@
 		
 		</main>
 	</div>
-
-
-		
-	<aside class="panel panel-primary" id ="form">
-		<div class="form-group" id="formbox">
-			<label for="username" style="margin-left:20px;">Username </label>
-				<input type="text" class="form-control" id="username" placeholder="Skriv dit username her">
-				<div class="form-group">
-				<label for="password" style="margin-left:20px;">Password</label>
-				<input type="password" class="form-control" id="password" placeholder="Skriv dit password her">
-				<div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input" id="checkbox">
-      Husk mig
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Log på</button>
-
-
-
-
-				</div>
-
-
-
-
-
-		</form>
-	</aside>
 	<article class="container">
 		<img src="img/csgo.jpg" class="col-md-12 img-responsive " id="Padding">
 
@@ -122,8 +142,11 @@
 		<p >Copyright &copy</p>
 
 </footer>
-<script type="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <script>
+
 function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -134,14 +157,40 @@ function myFunction() {
 }
 
 
-
-$(document).ready(function(){
- $(".login").click(function(){
-   $(".panel.panel-primary").hide();
- });
-});
+</script>
+<script>
+function myFunction2() {
+    var x = document.getElementById("myFile");
+    x.disabled = true;
+}
 
 </script>
+<script>
+
+
+
+</script>
+<script>
+	$(document).ready(function(){
+	$("#show").hide();
+});
+	
+
+	$(document).ready(function(){
+		$("#button").click(function(){
+			$("#show").show();
+		});
+	});
+
+	$(document).ready(function(){
+		$(".login").click(function(){
+			$("aside").toggle();
+		});
+	});
+
+
+</script>
+
 	
 </body>
 </html>
